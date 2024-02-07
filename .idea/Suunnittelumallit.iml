@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Composite" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Observer" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/factorymethod" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Singleton" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
