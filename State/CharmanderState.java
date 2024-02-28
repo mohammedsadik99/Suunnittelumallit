@@ -1,4 +1,3 @@
-
 public class CharmanderState implements PokemonState {
     @Override
     public void execute() {

@@ -1,4 +1,3 @@
-
 public class CharizardState implements PokemonState {
     @Override
     public void execute() {
