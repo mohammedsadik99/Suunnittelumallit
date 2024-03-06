@@ -1,8 +1,5 @@
-public abstract class Game {
-
+abstract class Game {
     protected int playersCount;
-    protected int currentPlayer;
-    protected boolean gameOver;
 
     abstract void initializeGame();
 
@@ -12,14 +9,12 @@ public abstract class Game {
 
     abstract void printWinner();
 
-    public final void playOneGame(int playersCount) {
-        this.playersCount = playersCount;
+    public final void playOneGame() {
         initializeGame();
-        currentPlayer = 0;
-        while (!gameOver) {
-            makePlay(currentPlayer);
-            currentPlayer = (currentPlayer + 1) % playersCount;
-            gameOver = endOfGame();
+        int j = 0;
+        while (!endOfGame()) {
+            makePlay(j);
+            j = (j + 1) % playersCount;
         }
         printWinner();
     }

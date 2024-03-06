@@ -1,31 +1,30 @@
-import java.util.Random;
-
 public class DiceGame extends Game {
+    private int[] scores;
+    private int currentPlayer;
 
-    private int[] playersScores;
-    private static final int WINNING_SCORE = 100;
+    public void setPlayersCount(int playersCount) {
+        scores = new int[playersCount];
+    }
 
     @Override
     void initializeGame() {
-        playersScores = new int[playersCount];
-        System.out.println("Welcome to the Dice Game! The objective is to reach " + WINNING_SCORE + " points.");
+        System.out.println("Starting the dice game with " + playersCount + " players.");
+        currentPlayer = 0;
     }
 
     @Override
     void makePlay(int player) {
-        Random rand = new Random();
-        int diceRoll1 = rand.nextInt(6) + 1;
-        int diceRoll2 = rand.nextInt(6) + 1;
-        int totalScore = diceRoll1 + diceRoll2;
-        playersScores[player] += totalScore;
-        System.out.println("Player " + (player + 1) + " rolled a " + diceRoll1 + " and a " + diceRoll2 + ". Total score: " + totalScore);
-        System.out.println("Player " + (player + 1) + " current score: " + playersScores[player]);
+        int roll1 = rollDice();
+        int roll2 = rollDice();
+        int total = roll1 + roll2;
+        scores[currentPlayer] += total;
+        System.out.println("Player " + (currentPlayer + 1) + " rolled " + roll1 + " and " + roll2 + ". Total score: " + scores[currentPlayer]);
     }
 
     @Override
     boolean endOfGame() {
-        for (int score : playersScores) {
-            if (score >= WINNING_SCORE) {
+        for (int score : scores) {
+            if (score >= 100) {
                 return true;
             }
         }
@@ -34,14 +33,13 @@ public class DiceGame extends Game {
 
     @Override
     void printWinner() {
+        System.out.println("Game over! Final scores:");
         for (int i = 0; i < playersCount; i++) {
-            if (playersScores[i] >= WINNING_SCORE) {
-                System.out.println("Player " + (i + 1) + " wins with a score of " + playersScores[i] + "!");
-            }
+            System.out.println("Player " + (i + 1) + ": " + scores[i]);
         }
-        System.out.println("Final Scores:");
-        for (int i = 0; i < playersCount; i++) {
-            System.out.println("Player " + (i + 1) + ": " + playersScores[i]);
-        }
+    }
+
+    private int rollDice() {
+        return (int) (Math.random() * 6) + 1;
     }
 }
