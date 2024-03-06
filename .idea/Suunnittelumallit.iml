@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Decorator" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/State" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TemplateMethod" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ChainOfResbonsibility" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Strategy" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
