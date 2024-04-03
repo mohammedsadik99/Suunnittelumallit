@@ -17,6 +17,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Memento" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Proxy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Visitor" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Adapter" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Builder" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
