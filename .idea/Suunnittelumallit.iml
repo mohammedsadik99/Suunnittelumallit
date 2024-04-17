@@ -19,6 +19,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Visitor" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Adapter" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Builder" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Bridge" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Prototype" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
